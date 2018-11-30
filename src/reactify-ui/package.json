@@ -3,8 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "@progress/kendo-dateinputs-react-wrapper": "^2018.3.1017",
+    "@progress/kendo-ui": "^2018.3.1122",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
+    "react-cookies": "^0.1.0",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "react-scripts": "1.1.4",

@@ -15,11 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.views.generic import TemplateView
-from django.urls import path, include
-
-
+from django.urls import path, include, re_path
+from django.conf.urls import url
+from rest_framework.urlpatterns import format_suffix_patterns
+from vehicle import views
 urlpatterns = [
     path('', TemplateView.as_view(template_name='react.html')),
+    re_path(r'^saved/', TemplateView.as_view(template_name='react.html')),
+    re_path(r'^Show/', TemplateView.as_view(template_name='react.html')),
+    re_path(r'^saved/update', TemplateView.as_view(template_name='react.html')),
+
     path('admin/', admin.site.urls),
-    path('api/posts/', include('posts.urls'))
+    path('api/posts/', include('posts.urls')),
+    path('vehicle/', include('vehicle.urls')),
+
 ]
+
+    # path('brand/', include('vehicle.urls')),
+    # path('model/', include('vehicle.urls')),
+
+
+
+
+    # path('brand/',views.BrandList.as_view()),

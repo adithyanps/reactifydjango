@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'posts',
+    'vehicle',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,12 @@ WSGI_APPLICATION = 'reactify.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vehicle-django',
+        'USER':'postgres',
+        'PASSWORD':'test123',
+        'HOST':'127.0.0.1',
+        'PORT':'5432'
     }
 }
 
@@ -125,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'), 
+    os.path.join(BASE_DIR, 'staticfiles'),
 ]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-cdn-local')
 
@@ -142,6 +147,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     )
+    # ,
+    #    'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication',
+    #     'rest_framework.authentication.BasicAuthentication',
+    # )
 }
-
-
