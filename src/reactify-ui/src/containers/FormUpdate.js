@@ -97,9 +97,7 @@ class FormUpdate extends Component {
     handleInputChange = (event) => {
       event.preventDefault();
       console.log(event.target.name,event.target.value)
-      // this.setState({
-      //   [event.target.name] : event.target.value
-      // })
+  
       let key = event.target.name
       let  value = event.target.value
       if (key === 'register_no') {
