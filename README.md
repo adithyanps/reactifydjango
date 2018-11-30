@@ -4,8 +4,11 @@ React is a powerful component JavaScript library. With it, you can build all kin
 
 This project is about integrating React with Django.
 
+
 #### Tech
+
 React 16.4.0
+
 Django 2.0
 Django Rest Framework 3.8.2
 Django CORS Headers 2.2.0
